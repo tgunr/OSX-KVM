@@ -1,11 +1,3 @@
-*.iso
-mac_hdd.img
-mac_hdd_ng.img
-*.sha256sum
-*.sucatalog
-*.img
-*.dmg
-*.dist
-*.smd
-*.dmg
-OVMF_VARS-1024x768.fd
+BaseSystem.chunklist
+BaseSystem.dmg
+BaseSystem.img
