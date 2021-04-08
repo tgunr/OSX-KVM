@@ -1,7 +1,7 @@
 <domain type='kvm' id='28' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
-  <name>HighSierra</name>
-  <uuid>2aca0dd6-cec9-4717-9ab2-0b7b13d111c3</uuid>
-  <title>HighSierra</title>
+  <name>highsierra</name>
+  <uuid>abe4c109-7174-483c-8218-1ffb34812551</uuid>
+  <title>highsierra</title>
   <memory unit='KiB'>4194304</memory>
   <currentMemory unit='KiB'>4194304</currentMemory>
   <vcpu placement='static'>4</vcpu>
@@ -11,7 +11,7 @@
   <os>
     <type arch='x86_64' machine='pc-q35-3.1'>hvm</type>
     <loader readonly='yes' type='pflash'>/var/lib/osx/OSXKVM/OVMF_CODE.fd</loader>
-    <nvram>/var/lib/osx/OSXKVM/vm/highsierra.fd</nvram>
+    <nvram>/var/lib/libvirt/qemu/nvram/highsierra_VARS.fd</nvram>
   </os>
   <features>
     <acpi/>
