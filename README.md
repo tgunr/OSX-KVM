@@ -128,6 +128,8 @@ Phenom II X3 720 does not. Ryzen processors work just fine.
   qemu-img convert BaseSystem.dmg -O raw BaseSystem.img
   ```
 
+#### Create virtual HDD image
+
 * Create a virtual HDD image where macOS will be installed. If you change the
   name of the disk image from `mac_hdd.img` to something else, the boot scripts
   will need to be updated to point to the new image name.
@@ -137,6 +139,14 @@ Phenom II X3 720 does not. Ryzen processors work just fine.
   ```
 
   NOTE: Create this HDD image file on a fast SSD/NVMe disk for best results.
+
+#### Create ZVOL HDD
+
+On ZFS  create a ZVOL dataset to be used as the HDD.
+
+```
+zfs create -V 128G pool/vm/machd
+```
 
 * Now you are ready to install macOS 🚀
 
@@ -149,6 +159,13 @@ Phenom II X3 720 does not. Ryzen processors work just fine.
   ```
   ./OpenCore-Boot.sh
   ```
+
+If using ZVOL
+
+```
+./OpenCore-Boot.sh -zvol
+```
+
 
   Note: This same script works for Big Sur, Catalina, Mojave, and High Sierra.
 
