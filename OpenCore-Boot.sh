@@ -51,9 +51,8 @@ args=(
   -device ide-hd,bus=sata.3,drive=InstallMedia
   -device ide-hd,bus=sata.4,drive=InstallMedia1
   -drive id=InstallMedia,if=none,file="$REPO_PATH/BaseSystem.img",format=raw
-  -drive id=InstallMedia1,if=none,file="$REPO_PATH/dmg/leopard_9a581_userdvd.img",format=raw
   # -drive id=MacHDD,if=none,file="$REPO_PATH/mac_hdd_ng.img",format=qcow2
-  -drive id=MacHDD,if=none,file=/dev/opool/vm/leopard,format=raw
+  -drive id=MacHDD,if=none,file=/dev/opool/vm/machd,format=raw
   -device ide-hd,bus=sata.5,drive=MacHDD
   # -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27
   -netdev user,id=net0 -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27
